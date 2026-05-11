@@ -14,6 +14,7 @@ message: "",
 const [loading, setLoading] = useState(false);
 const [status, setStatus] = useState("");
 
+
 const handleChange = (
 e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 ) => {
@@ -23,7 +24,9 @@ setFormData({
 });
 };
 
+
 const validate = () => {
+    
     if (!formData.name || !formData.email || !formData.message) {
     return "Please fill in all fields.";
     }
@@ -67,8 +70,12 @@ const validate = () => {
     }
     setLoading(false);
     };
+
     return (
+        <section className="bg-dark text-white py-5" style={{ minHeight: '100vh' }}>
+
     <div style={{ width: "400px", margin: "50px auto", fontFamily: "Arial" }}>
+        <br/>
     <h2>Contact Me</h2>
     <form onSubmit={handleSubmit}>
     <input
@@ -104,5 +111,8 @@ style={{ width: "100%", padding: "10px" }}
 </form>
 <p>{status}</p>
 </div>
+</section>
+
 );
+
 }

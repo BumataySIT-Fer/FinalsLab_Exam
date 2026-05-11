@@ -2,7 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { useState } from "react";
 
-const PURPLE = '#a855f7';
+const PURPLE = 'rgb(255,255,255)';
 
 function NavBar() {
   const [expanded, setExpanded] = useState(false);
@@ -30,35 +30,20 @@ function NavBar() {
           border-radius: 6px;
           transition: color 0.2s, background 0.2s;
         }
-        .nav-custom-link:hover {
-          color: ${PURPLE} !important;
-          background: rgba(168, 85, 247, 0.1);
-        }
-        .nav-custom-link.active {
-          color: ${PURPLE} !important;
-        }
+        
+        
         .hire-btn {
-          background: transparent;
-          border: 1px solid ${PURPLE};
-          color: ${PURPLE} !important;
-          font-size: 0.9rem;
-          font-weight: 600;
-          padding: 6px 18px;
-          border-radius: 6px;
-          text-decoration: none;
-          transition: background 0.2s, color 0.2s;
+            color: #aaa !important;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: color 0.2s, background 0.2s;
         }
-        .hire-btn:hover {
-          background: ${PURPLE};
-          color: #fff !important;
-        }
-        .navbar-toggler {
-          border-color: ${PURPLE} !important;
-        }
-        .navbar-toggler-icon {
-          filter: invert(1);
-        }
-      `}</style>
+       
+       `
+       }</style>
 
       <Navbar
         expand="md"
@@ -73,25 +58,25 @@ function NavBar() {
         }}
       >
         <Container>
-          {/* Logo */}
+         
           <Navbar.Brand as={Link} to="/" className="nav-logo">
             Bumatay F.
           </Navbar.Brand>
 
-          {/* Mobile Toggle */}
+          
           <Navbar.Toggle
             aria-controls="main-nav"
-            onClick={() => setExpanded(!expanded)}
+            
           />
 
-          {/* Links */}
+          
           <Navbar.Collapse id="main-nav">
             <Nav className="ms-auto align-items-center gap-1">
               <Nav.Link
                 as={NavLink}
                 to="/"
                 className="nav-custom-link"
-                onClick={() => setExpanded(false)}
+                
                 end
               >
                 Home
@@ -100,14 +85,14 @@ function NavBar() {
                 as={NavLink}
                 to="/about"
                 className="nav-custom-link"
-                onClick={() => setExpanded(false)}
+                
               >
                 About
               </Nav.Link>          
               <NavLink
                 to="/contact"
                 className="hire-btn ms-2"
-                onClick={() => setExpanded(false)}
+                
               >
                 Contact Me
               </NavLink>
