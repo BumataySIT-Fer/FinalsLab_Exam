@@ -76,7 +76,10 @@ const validate = () => {
 
     <div style={{ width: "400px", margin: "50px auto", fontFamily: "Arial" }}>
         <br/>
-    <h2>Contact Me</h2>
+    <h2 className="fw-bold mb-4" >Contact Me</h2>
+    <p style={{ fontSize: '1.1rem', marginTop: '20px', color: 'rgb(255,255,255)', lineHeight: '1.8' }}>
+    If you require any further information, feel free to contact me!
+    </p>
     <form onSubmit={handleSubmit}>
     <input
     type="text"
